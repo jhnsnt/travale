@@ -2,8 +2,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import '../css/signup.css';
 import travaleLogo from "../images/travale-logo.svg";
-import FieldsInput from "../components/FieldsInput";
-import SignUpBtn from "../components/SignUpBtn";
 import PolicyLinks from "../components/PolicyLinks";
 
 function SignUpPage(){
@@ -82,6 +80,8 @@ function SignUpPage(){
           <PolicyLinks />
 
           <a onClick={handleSubmit}>Sign Up</a>
+
+          <p>Already have and account? <Link to="/login">Sign in</Link></p>
       </div>
   );
 }

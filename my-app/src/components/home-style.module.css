@@ -1,0 +1,29 @@
+.person {
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.variant1 {
+    background-image: url(/images/dp.jpg);
+    box-sizing: border-box;
+}
+
+.variant2 {
+    background-image: url(/images/dp.jpg);
+    border: 4px green solid;
+    box-sizing: border-box;
+}
+
+.variant3 {
+    background-image: url(/images/dp.jpg);
+    border: 4px red solid;
+    box-sizing: border-box;
+}
+
+.variant4 {
+    background-image: url(/images/dp.jpg);
+    border: 4px red solid;
+    box-sizing: border-box;
+}

@@ -16,7 +16,7 @@ export default function Home() {
   const name1 = "You";
   const name2 = "Robert Hodges";
   const name3 = "Evan Hamilton";
-  const name4 = "Sue Hunter";
+  const name4 = "Sue test";
 
   return (
     <div>

@@ -6,22 +6,26 @@ import { useEffect } from "react";
 import Link from "next/link";
 import Image from 'next/image';
 
-import PolicyLinks from "@/components/PolicyLinks";
-// import TravaleLogo from "@/components/TravaleLogo";
 
-export default function LoginPage() {
+export default function SignupPage() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [firstname, setFistname] = useState("");
+    const [lastname, setLastname] = useState("");
     const router = useRouter();
 
     const isValidEmail = (value: string) =>
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 
-    const allFilled = isValidEmail(email) && password;
+    const allFilled = 
+        isValidEmail(email) 
+        && password
+        && firstname
+        && lastname;
     
     const handleSubmit = () => {
         if (!allFilled) return;
-        router.push("/home"); // navigate in Next.js
+        router.push("/signin"); // navigate in Next.js
     };
 
     useEffect(() => {
@@ -47,7 +51,7 @@ export default function LoginPage() {
         // Initial color
         changeBg();
 
-        // Change every 5 seconds
+        // Change every 10 seconds
         const interval = setInterval(changeBg, 10000);
 
         // Cleanup: restore background when leaving this page
@@ -71,11 +75,11 @@ export default function LoginPage() {
             </div>
             <div className="">
                 <div className="fields-container text-[#3f3f3f] w-full lg:max-w-[375px] block mx-auto p-5 bg-white rounded-xl">
-                    <h1 className="text-left text-3xl lg:text-4xl font-bold gradient-text">
-                        Sign in
+                    <h1 className="text-left text-3xl lg:text-4xl font-semibold gradient-text">
+                        Sign Up
                     </h1>
                     <p className="my-4">
-                        Don't have an account? <Link href="/signup">Sign Up</Link>
+                        Already have an account? <Link href="/signin">Sign In</Link>
                     </p>
 
                     <div className="text-center">
@@ -103,19 +107,35 @@ export default function LoginPage() {
                             onChange={(e) => setPassword(e.target.value)}
                         />
 
+                        <input
+                            type="text"
+                            className="fields border-none p-2 w-full rounded"
+                            placeholder="First name"
+                            value={firstname}
+                            onChange={(e) => setFistname(e.target.value)}
+                        />
+
+                        <input
+                            type="text"
+                            className="fields border-none p-2 w-full rounded"
+                            placeholder="Last name"
+                            value={lastname}
+                            onChange={(e) => setLastname(e.target.value)}
+                        />
+
                         <p className="my-5">
                             By signing up, you agree to our <a href="#">Terms</a>, <a href="#">Privacy Policy</a> and <a href="#">Cookies Policy</a>.
                         </p>
 
                         <span
-                            className="signBtn text-center m-auto"
+                            className="signBtn rounded-xl px-5 py-4 w-full block text-white"
                             onClick={handleSubmit}
                             style={{
                                 opacity: allFilled ? 1 : 0.5,
                                 cursor: allFilled ? "pointer" : "arrow",
                             }}
                         >
-                            Sign In
+                            Sign Up
                         </span>
                     </div>
                 </div>

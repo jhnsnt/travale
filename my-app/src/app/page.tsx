@@ -1,10 +1,10 @@
 'use client'; // Required for useState and useRouter in Next.js App Router
 
-import LoginPage from "@/components/Login";
+import WelcomePage from "@/components/Welcome";
 
 
 export default function Home() {
   return (
-    <LoginPage />
+      <WelcomePage />
   );
 }

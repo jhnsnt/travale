@@ -20,12 +20,8 @@
 }
 
 body {
-    /* background-image: linear-gradient(to right bottom, #4395e2, #209cde, #00a2d7, #00a7ce, #1dabc4, #3bafb8, #55b3ad, #6cb5a4, #88b89a, #a2ba96, #b8bc99, #cabea1); */
+    background-image: linear-gradient(to right bottom, #4395e2, #209cde, #00a2d7, #00a7ce, #1dabc4, #3bafb8, #55b3ad, #6cb5a4, #88b89a, #a2ba96, #b8bc99, #cabea1);
     margin: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    /* background: 
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('/images/login-bg.jpg'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -64,11 +60,6 @@ a {
 
 .signBtn {
     background-image: linear-gradient(to right top, #4395e2, #209cde, #00a2d7, #00a7ce, #1dabc4, #3bafb8, #55b3ad, #6cb5a4, #88b89a, #a2ba96, #b8bc99, #cabea1);
-    border-radius: 6px;
-    padding: 10px 20px;
-    color: #ffffff;
-    font-weight: 600;
-    display: block;
 }
 
 .bg-login {

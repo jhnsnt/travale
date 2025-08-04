@@ -38,12 +38,17 @@ export default function SignUpPage() {
           </p>
 
           <input
-            type="email"
-            className="fields"
-            placeholder="Email Address"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+                type="email"
+                placeholder="Email Address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className={`fields border ${ 
+                email && !isValidEmail(email) 
+                    ? "!border-red-700" 
+                    : email && isValidEmail(email)
+                    ? "border-green-700" : "border-none"
+                }`}
+            />
 
           <input
             type="password"

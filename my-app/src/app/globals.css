@@ -20,49 +20,61 @@
 }
 
 body {
-  background-image: linear-gradient(to right bottom, #4395e2, #209cde, #00a2d7, #00a7ce, #1dabc4, #3bafb8, #55b3ad, #6cb5a4, #88b89a, #a2ba96, #b8bc99, #cabea1);
-  overflow-x: hidden;
-  height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
+    /* background-image: linear-gradient(to right bottom, #4395e2, #209cde, #00a2d7, #00a7ce, #1dabc4, #3bafb8, #55b3ad, #6cb5a4, #88b89a, #a2ba96, #b8bc99, #cabea1); */
+    margin: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    /* background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('/images/login-bg.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
-.fields-container {
-    max-width: 350px;
-    margin: auto;
+
+.gradient-text {
+    display: inline-block;
+    line-height: 50px;
+    background-image: linear-gradient(to left top, #4395e2, #209cde, #00a2d7, #00a7ce, #1dabc4, #3bafb8, #55b3ad, #6cb5a4, #88b89a, #a2ba96, #b8bc99, #cabea1);
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
 }
 
 .fields {
-    width: 280px;
     padding: 15px 20px;
-    border: none;
     border-radius: 6px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgb(211 211 211 / 50%);
     display: block;
     margin: 10px auto;
 }
 
 a {
     text-decoration: none;
-    color: #fff;
     font-weight: 600;
 }
 
 .signBtn {
-    background: #0F7DA0;
+    background-image: linear-gradient(to right top, #4395e2, #209cde, #00a2d7, #00a7ce, #1dabc4, #3bafb8, #55b3ad, #6cb5a4, #88b89a, #a2ba96, #b8bc99, #cabea1);
     border-radius: 6px;
     padding: 10px 20px;
     color: #ffffff;
     font-weight: 600;
-    width: 280px;
-    margin: auto;
     display: block;
+}
+
+.bg-login {
+    background: url(/images/login-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 footer {
@@ -72,6 +84,3 @@ footer {
     padding: 10px 0;
 }
 
-main {
-    flex: 1;
-}

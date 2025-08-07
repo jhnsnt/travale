@@ -75,19 +75,13 @@ export default function SignupPage() {
             </div>
             <div className="">
                 <div className="fields-container text-[#3f3f3f] w-full lg:max-w-[375px] block mx-auto p-5 bg-white rounded-xl">
-                    <h1 className="text-left text-3xl lg:text-4xl font-semibold gradient-text">
-                        Sign Up
+                    <h1 className="text-left text-3xl font-semibold gradient-text">
+                        Start your journey
                     </h1>
-                    <p className="my-4">
-                        Already have an account? <Link href="/signin">Sign In</Link>
+                    <p className="mb-5">
+                        Join a community of travelers. Book trips, share stories, and find your next destination.
                     </p>
-
                     <div className="text-center">
-                        {/* <p className="py-5">
-                            Your social travel hub — share your adventures, discover hidden
-                            gems, and connect with fellow explorers around the world.
-                        </p> */}
-
                         <input
                             type="email"
                             placeholder="Email Address"
@@ -128,7 +122,7 @@ export default function SignupPage() {
                         </p>
 
                         <span
-                            className="signBtn rounded-xl px-5 py-4 w-full block text-white"
+                            className="signBtn rounded-xl px-5 py-3 w-full block text-white"
                             onClick={handleSubmit}
                             style={{
                                 opacity: allFilled ? 1 : 0.5,
@@ -137,6 +131,10 @@ export default function SignupPage() {
                         >
                             Sign Up
                         </span>
+
+                        <p className="my-4">
+                            Already have an account? <Link href="/signin">Sign In</Link>
+                        </p>
                     </div>
                 </div>
             </div>

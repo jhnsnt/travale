@@ -56,8 +56,8 @@ export default function SigninPage() {
     }, []);
 
   return (
-    <main className="w-full flex items-center m-auto h-full p-0 lg:p-5">
-        <div className="m-auto">
+    <main className="w-full grid grid-rows-1 m-auto h-full p-0 lg:p-5">
+        <div className="content-end lg:content-center">
             <div className="">
                 <Image 
                     src="/images/travale-logo.svg"
@@ -67,55 +67,56 @@ export default function SigninPage() {
                     className="mx-auto block mb-5" 
                 />
             </div>
-            <div className="">
-                <div className="fields-container text-[#3f3f3f] w-full lg:max-w-[375px] block mx-auto p-5 bg-white rounded-xl">
-                    <h1 className="text-left text-3xl lg:text-4xl font-semibold gradient-text">
+            <div className="leading-[1.5] fields-container text-[#3f3f3f] w-full lg:max-w-[375px] block mx-auto p-5 bg-white rounded-xl">
+                <h1 className="text-left text-3xl font-semibold gradient-text">
+                    Join the journey.
+                </h1>
+                <p className="mb-5">
+                    Sign in to book trips, share travel stories, and connect with fellow explorers.
+                </p>
+                
+                <div className="text-center">
+                    {/* <p className="py-5">
+                        Your social travel hub — share your adventures, discover hidden
+                        gems, and connect with fellow explorers around the world.
+                    </p> */}
+
+                    <input
+                        type="email"
+                        placeholder="Email Address"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className={`fields border p-2 w-full rounded mb-2 
+                                ${
+                                    email && !isValidEmail(email) ? "!border-red-700" : email && isValidEmail(email) ? "border-green-700" : "border-none"
+                                }`}
+                    />
+
+                    <input
+                        type="password"
+                        className="fields border-none p-2 w-full rounded"
+                        placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+
+                    <p className="my-5">
+                        By signing up, you agree to our <a href="#">Terms</a>, <a href="#">Privacy Policy</a> and <a href="#">Cookies Policy</a>.
+                    </p>
+
+                    <span
+                        className="signBtn rounded-xl px-5 py-3 w-full block text-white"
+                        onClick={handleSubmit}
+                        style={{
+                            opacity: allFilled ? 1 : 0.5,
+                            cursor: allFilled ? "pointer" : "arrow",
+                        }}
+                    >
                         Sign In
-                    </h1>
+                    </span>
                     <p className="my-4">
                         Don't have an account? <Link href="/signup">Sign Up</Link>
                     </p>
-
-                    <div className="text-center">
-                        {/* <p className="py-5">
-                            Your social travel hub — share your adventures, discover hidden
-                            gems, and connect with fellow explorers around the world.
-                        </p> */}
-
-                        <input
-                            type="email"
-                            placeholder="Email Address"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            className={`fields border p-2 w-full rounded mb-2 
-                                    ${
-                                        email && !isValidEmail(email) ? "!border-red-700" : email && isValidEmail(email) ? "border-green-700" : "border-none"
-                                    }`}
-                        />
-
-                        <input
-                            type="password"
-                            className="fields border-none p-2 w-full rounded"
-                            placeholder="Password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-
-                        <p className="my-5">
-                            By signing up, you agree to our <a href="#">Terms</a>, <a href="#">Privacy Policy</a> and <a href="#">Cookies Policy</a>.
-                        </p>
-
-                        <span
-                            className="signBtn rounded-xl px-5 py-4 w-full block text-white"
-                            onClick={handleSubmit}
-                            style={{
-                                opacity: allFilled ? 1 : 0.5,
-                                cursor: allFilled ? "pointer" : "arrow",
-                            }}
-                        >
-                            Sign In
-                        </span>
-                    </div>
                 </div>
             </div>
         </div>

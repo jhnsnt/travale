@@ -20,7 +20,7 @@
 }
 
 body {
-    background-image: linear-gradient(to right bottom, #4395e2, #209cde, #00a2d7, #00a7ce, #1dabc4, #3bafb8, #55b3ad, #6cb5a4, #88b89a, #a2ba96, #b8bc99, #cabea1);
+    /* background-image: linear-gradient(to right bottom, #4395e2, #209cde, #00a2d7, #00a7ce, #1dabc4, #3bafb8, #55b3ad, #6cb5a4, #88b89a, #a2ba96, #b8bc99, #cabea1); */
     margin: 0;
     background-size: cover;
     background-position: center;
@@ -28,6 +28,10 @@ body {
     height: 100vh;
 }
 
+.navItem:hover {
+    background: rgba(0,0,0,.1);
+    transition: 300ms all ease-in-out;
+}
 
 .gradient-text {
     display: inline-block;
@@ -46,8 +50,8 @@ body {
 }
 
 .fields {
-    padding: 15px 20px;
-    border-radius: 6px;
+    padding: 12px 20px;
+    border-radius: 0.75rem;
     background: rgb(211 211 211 / 50%);
     display: block;
     margin: 10px auto;
@@ -75,3 +79,4 @@ footer {
     padding: 10px 0;
 }
 
+/* HOME */

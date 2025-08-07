@@ -44,22 +44,23 @@ export default function WelcomePage(){
         }, []);
     return (
         <div className="grid grid-rows-3 h-full w-full lg:max-w-[600px] m-auto p-5 text-center text-white">
+
             <div>
                 <Image 
                     src="/images/travale-logo.svg"
                     width={175}
                     height={40}
                     alt="Logo"
-                    className="mx-auto block mb-5" 
+                    className="block m-auto" 
                 />
             </div>
             <div>
-                <h1 className="text-3xl lg:text-4xl text-white font-semibold mb-5">Welcome to Travale</h1>
-                <p>Your social travel hub — share your adventures, discover hidden gems, and connect with fellow explorers around the world.</p>
+                <h1 className="text-5xl lg:text-7xl text-white mb-5">Next Stop: Anywhere</h1>
+                <p className="text-center">Find it. Book it. Post it. From last-minute getaways to bucket-list adventures — share your story with the world.</p>
             </div>
             <div className="content-end">
                 <span
-                    className="bg-white text-center m-auto  font-semibold text-[#3f3f3f] cursor-pointer rounded-xl px-5 py-4 w-[300px] block"
+                    className="bg-white text-center m-auto  font-semibold text-[#3f3f3f] cursor-pointer rounded-xl px-5 py-5 w-[320px] block"
                     onClick={handleSubmit}
                 >
                     Sign Up

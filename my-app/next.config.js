@@ -1,9 +1,10 @@
-const isProd = process.env.NODE_ENV === 'production';
-
-module.exports = {
-    output: 'export',
-    basePath: isProd ? '/travale' : '',
-    assetPrefix: isProd ? '/travale/' : '',
-    trailingSlash: true,
-    images: { unoptimized: true },
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export', // Static export mode
+  basePath: '/travale', // Folder name on GitHub Pages
+  assetPrefix: '/travale/', // Makes JS/CSS load from correct path
+  trailingSlash: true, // Ensures all routes end with /
+  images: { unoptimized: true }, // Required for static export
 };
+
+module.exports = nextConfig;

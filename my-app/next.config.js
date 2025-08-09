@@ -1,8 +1,8 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',         // enable static export
-  basePath: '/travale',     // repo name, leading slash
-  assetPrefix: '/travale/', // repo name, trailing slash here!
+  output: 'export',
+  basePath: '/travale',
+  assetPrefix: '/travale/',
+  trailingSlash: true, // this can help with routing on GitHub Pages
   images: {
     unoptimized: true,
   },

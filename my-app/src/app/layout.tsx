@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Travale",
     description: "Find it. Book it. Post it. From last-minute getaways to bucket-list adventures — share your story with the world.",
     icons: {
-        icon: "/images/travale-ico.svg"
+        icon: "/travale/images/travale-ico.svg"
     }
 };
 

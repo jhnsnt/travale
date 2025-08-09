@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // replaces next export
-  basePath: '/travale', // your repo name
-  assetPrefix: '/travale/', // prefix for assets so styles/images load
+  output: 'export',         // enable static export
+  basePath: '/travale',     // repo name, leading slash
+  assetPrefix: '/travale/', // repo name, trailing slash here!
   images: {
-    unoptimized: true, // needed for static export
+    unoptimized: true,
   },
 };
 

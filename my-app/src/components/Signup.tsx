@@ -45,7 +45,7 @@ export default function SignupPage() {
                         <div className="p-0 md:pr-2">
                             <h1 className="text-left text-3xl font-semibold gradient-text">
                                 <span className="flex">
-                                    <Image alt="travale icon" src="/images/travale-ico.svg" width={35} height={35} className="mr-1" /><span>Start your journey</span>
+                                    <Image alt="travale icon" src="/travale/images/travale-ico.svg" width={35} height={35} className="mr-1" /><span>Start your journey</span>
                                 </span>
                             </h1>
                             <p className="mb-5">

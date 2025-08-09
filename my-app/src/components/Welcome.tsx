@@ -12,9 +12,9 @@ export default function WelcomePage(){
 
     useEffect(() => {
             const images = [
-                "/images/login-bg.jpg",
-                "/images/login-bg2.jpg",
-                "/images/login-bg3.jpg",
+                "/travale/images/login-bg.jpg",
+                "/travale/images/login-bg2.jpg",
+                "/travale/images/login-bg3.jpg",
             ];
             let index = 0;
     
@@ -47,7 +47,7 @@ export default function WelcomePage(){
 
             <div>
                 <Image 
-                    src="/images/travale-logo.svg"
+                    src="/travale/images/travale-logo.svg"
                     width={175}
                     height={40}
                     alt="Logo"

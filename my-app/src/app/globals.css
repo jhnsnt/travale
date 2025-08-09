@@ -42,7 +42,7 @@ body {
 }
 
 .bg-img {
-    background: url(/images/login-bg.jpg) top center;
+    background: url(/travale/images/login-bg.jpg) top center;
     background-size: cover;
     /* border-radius: 0.50rem 0 0 0.5rem; */
 }
@@ -72,7 +72,7 @@ a {
 }
 
 .bg-login {
-    background: url(/images/login-bg.jpg) no-repeat;
+    background: url(/travale/images/login-bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }

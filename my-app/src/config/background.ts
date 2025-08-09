@@ -1,5 +1,5 @@
 export const backgroundImages = [
-  "/travale/images/login-bg.jpg",
-  "/travale/images/login-bg2.jpg",
-  "/travale/images/login-bg3.jpg",
+  "/images/login-bg.jpg",
+  "/images/login-bg2.jpg",
+  "/images/login-bg3.jpg",
 ];

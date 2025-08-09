@@ -7,11 +7,9 @@ const poppins = Poppins({
     weight: ['400', '600', '700', '800']
 });
 
-
-
 export const metadata: Metadata = {
     title: "Travale",
-    description: "Your social travel hub — share your adventures, discover hidden gems, and connect with fellow explorers around the world.",
+    description: "Find it. Book it. Post it. From last-minute getaways to bucket-list adventures — share your story with the world.",
     icons: {
         icon: "/images/travale-ico.svg"
     }
@@ -24,11 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
+        <body
             className={`${poppins.className} antialiased`}
         >
             {children}
-      </body>
+        </body>
     </html>
   );
 }

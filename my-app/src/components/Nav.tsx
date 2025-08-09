@@ -12,15 +12,10 @@ export default function Nav() {
         { label: 'Search', icon: '/images/search_black.png', activeIcon: '/images/search_active.png' },
         { label: 'Notification', icon: '/images/notification_black.png', activeIcon: '/images/notification_active.png' },
     ];
+    
     return (
         <div className="w-full md:w-[20%] border-r-1 p-4 hidden md:block">
             <ul className="">
-                {/* <li className="m-1 p-3"><img src="/images/travale-ico.svg" className="mr-4" width={35} height={35} /></li>
-                <li className="flex items-center m-1 p-3"><img src="/images/home_black.png" className="mr-4" width={25} height={25} /> Home</li>
-
-                <li className="flex items-center m-1 p-3"><img src="/images/book_black.png" className="mr-4" width={25} height={25} /> Book</li>
-                <li className="flex items-center m-1 p-3"><img src="/images/search_black.png" className="mr-4" width={25} height={25} /> Search</li>
-                <li className="flex items-center m-1 p-3"><img src="/images/notification_black.png" className="mr-4" width={25} height={25} /> Notification</li> */}
                 <li className="m-1 p-3"><img src="/images/travale-ico.svg" className="mr-4" width={35} height={35} /></li>
                 {navItems.map((item) => {
                     const isActive = active === item.label;

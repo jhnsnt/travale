@@ -55,7 +55,7 @@ export default function WelcomePage(){
                 />
             </div>
             <div>
-                <h1 className="text-5xl lg:text-7xl text-white mb-5">Next Stop: Anywhere</h1>
+                <h1 className="text-5xl lg:text-7xl text-white mb-5 font-bold">Next Stop: <span className="gradient-text">Anywhere</span></h1> 
                 <p className="text-center">Find it. Book it. Post it. From last-minute getaways to bucket-list adventures — share your story with the world.</p>
             </div>
             <div className="content-end">

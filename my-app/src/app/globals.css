@@ -35,11 +35,16 @@ body {
 
 .gradient-text {
     display: inline-block;
-    line-height: 50px;
     background-image: linear-gradient(to left top, #4395e2, #209cde, #00a2d7, #00a7ce, #1dabc4, #3bafb8, #55b3ad, #6cb5a4, #88b89a, #a2ba96, #b8bc99, #cabea1);
     background-size: 100% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.bg-img {
+    background: url(/images/login-bg.jpg) top center;
+    background-size: cover;
+    /* border-radius: 0.50rem 0 0 0.5rem; */
 }
 
 .logo {

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import styles from "./home-style.module.css";
+import Image from 'next/image';
 
 export default function Nav() {
     const [active, setActive] = useState('Home');
@@ -16,7 +17,7 @@ export default function Nav() {
     return (
         <div className="w-full md:w-[20%] border-r-1 p-4 hidden md:block">
             <ul className="">
-                <li className="m-1 p-3"><img src="/images/travale-ico.svg" className="mr-4" width={35} height={35} /></li>
+                <li className="m-1 p-3"><Image alt="travale icon" src="/images/travale-ico.svg" className="mr-4" width={35} height={35} /></li>
                 {navItems.map((item) => {
                     const isActive = active === item.label;
                         return (
@@ -24,7 +25,7 @@ export default function Nav() {
                                 onClick={() => setActive(item.label)}
                                 className="navItem flex items-center m-1 p-3 cursor-pointer w-full rounded"
                             >
-                                <img src={isActive ? item.activeIcon : item.icon}
+                                <Image src={isActive ? item.activeIcon : item.icon}
                                     alt={item.label} 
                                     className="mr-4"
                                     width={25} height={25} />

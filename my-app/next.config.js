@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/travale/my-app',
-  assetPrefix: '/travale/my-app/',
+  basePath: '/travale',
+  assetPrefix: '/travale/',
 };
 
 module.exports = nextConfig;

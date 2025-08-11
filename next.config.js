@@ -1,6 +1,12 @@
+/** @type {import('next').NextConfig} */
+const isGithubPages = process.env.GITHUB_PAGES === 'true';
+const repoName = 'travale';
+
 const nextConfig = {
+  basePath: isGithubPages ? `/${repoName}` : '',
+  assetPrefix: isGithubPages ? `/${repoName}/` : '',
   images: {
-    unoptimized: true, // keep this if you want to avoid next/image optimization
+    unoptimized: true
   },
 };
 

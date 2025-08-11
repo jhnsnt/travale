@@ -3,6 +3,9 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useEffect } from "react";
 
+import { rotateBackground } from "@/lib/background";
+import { backgroundImages } from "@/config/background";
+
 export default function WelcomePage(){
     const router = useRouter();
 
@@ -11,43 +14,16 @@ export default function WelcomePage(){
     }
 
     useEffect(() => {
-            const images = [
-                "/images/login-bg.jpg",
-                "/images/login-bg2.jpg",
-                "/images/login-bg3.jpg",
-            ];
-            let index = 0;
+        const cleanup = rotateBackground(backgroundImages);
+        return cleanup;
+    }, []);
     
-            // Function to change background
-            const changeBg = () => {
-                document.body.style.transition = "background-image 1s ease";
-                document.body.style.backgroundImage = `
-                    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                    url(${images[index]})
-                `;
-                document.body.style.backgroundSize = "cover";
-                document.body.style.backgroundPosition = "center";
-                index = (index + 1) % images.length;
-            };
-    
-            // Initial color
-            changeBg();
-    
-            // Change every 10 seconds
-            const interval = setInterval(changeBg, 10000);
-    
-            // Cleanup: restore background when leaving this page
-            return () => {
-                clearInterval(interval);
-                document.body.style.backgroundColor = ""; // reset
-            };
-        }, []);
     return (
         <div className="grid grid-rows-3 h-full w-full lg:max-w-[600px] m-auto p-5 text-center text-white">
 
             <div>
                 <Image 
-                    src="/images/travale-logo.svg"
+                    src="/travale/images/travale-logo.svg"
                     width={175}
                     height={40}
                     alt="Logo"

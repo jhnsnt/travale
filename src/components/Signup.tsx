@@ -31,14 +31,14 @@ export default function SignupPage() {
 
   return (
     <main className="w-full flex h-full p-0 lg:p-5">
-        <div className="m-auto p-3 md:p-0">
-            <div className="flex flex-col md:flex-row w-full bg-white rounded-lg">
-                <div className="w-full md:max-w-[50%] p-2">
-                    <div className="bg-img h-[250px] md:h-[550px] rounded-[0.30rem]">
+        <div className="m-0 md:m-auto">
+            <div className="flex flex-col md:flex-row w-full bg-white rounded-[0px] md:rounded-xl h-full md:pt-2 md:pl-2 md:pb-2 pt-0 pl-0 pb-0">
+                <div className="w-full md:max-w-[50%] p-0 md:p-0">
+                    <div className="bg-img h-[350px] md:h-[550px] rounded-l-[0px] md:rounded-l-md">
                     </div>
                 </div>
-                <div className="text-[#3f3f3f] mx-auto p-5 md:max-w-[50%] my-auto">
-                    <div className="p-0 md:pr-2">
+                <div className="text-[#3f3f3f] mx-auto p-5 md:max-w-[50%] mt-[-50px] md:my-auto rounded-t-[40px] bg-white">
+                    <div className="relative top-[40px] md:top-[0px]">
                         <h1 className="text-left text-3xl font-semibold gradient-text">
                             <span className="flex">
                                 <Image alt="travale icon" src="/images/travale-ico.svg" width={35} height={35} className="mr-1" /><span>Start your journey</span>

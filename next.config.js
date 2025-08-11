@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // replaces `next export`
   basePath: '/travale', // required for GitHub Pages subfolder
   assetPrefix: '/travale/', // ensures assets load from correct folder
   images: {

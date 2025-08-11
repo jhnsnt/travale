@@ -17,7 +17,7 @@ export default function Home() {
                     <div className="w-full md:w-[700px] block mx-auto">
                         <div className="">
                             <Image 
-                                src="/travale/images/travale-logo-main.svg"
+                                src="/images/travale-logo-main.svg"
                                 width={175}
                                 height={40}
                                 alt="Logo"

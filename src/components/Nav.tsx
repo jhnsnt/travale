@@ -8,16 +8,16 @@ export default function Nav() {
     const [active, setActive] = useState('Home');
 
     const navItems = [
-        { label: 'Home', icon: '/travale/images/home_black.png', activeIcon: '/travale/images/home_active.png' },
-        { label: 'Book', icon: '/travale/images/book_black.png', activeIcon: '/travale/images/book_active.png' },
-        { label: 'Search', icon: '/travale/images/search_black.png', activeIcon: '/travale/images/search_active.png' },
-        { label: 'Notification', icon: '/travale/images/notification_black.png', activeIcon: '/travale/images/notification_active.png' },
+        { label: 'Home', icon: '/images/home_black.png', activeIcon: '/images/home_active.png' },
+        { label: 'Book', icon: '/images/book_black.png', activeIcon: '/images/book_active.png' },
+        { label: 'Search', icon: '/images/search_black.png', activeIcon: '/images/search_active.png' },
+        { label: 'Notification', icon: '/images/notification_black.png', activeIcon: '/images/notification_active.png' },
     ];
     
     return (
         <div className="w-full md:w-[20%] border-r-1 p-4 hidden md:block">
             <ul className="">
-                <li className="m-1 p-3"><Image alt="travale icon" src="/travale/images/travale-ico.svg" className="mr-4" width={35} height={35} /></li>
+                <li className="m-1 p-3"><Image alt="travale icon" src="/images/travale-ico.svg" className="mr-4" width={35} height={35} /></li>
                 {navItems.map((item) => {
                     const isActive = active === item.label;
                         return (

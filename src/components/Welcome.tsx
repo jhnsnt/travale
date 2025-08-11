@@ -23,7 +23,7 @@ export default function WelcomePage(){
 
             <div>
                 <Image 
-                    src="/travale/images/travale-logo.svg"
+                    src="/images/travale-logo.svg"
                     width={175}
                     height={40}
                     alt="Logo"

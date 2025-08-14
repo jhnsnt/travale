@@ -13,7 +13,7 @@ export default function Home() {
         <div>
             <div className="flex flex-col md:flex-row w-full min-h-screen">
                 <div className="w-full md:w-[20%]"></div>
-                <div className="w-full md:w-[60%] bg-white p-4">
+                <div className="w-full md:w-[60%] bg-white py-4">
                     <div className="w-full grid-rows-3">
                         <div className="w-full md:w-[700px] block mx-auto">
                             <div className="">
@@ -29,7 +29,7 @@ export default function Home() {
                                 <Story />
                             </div>
                         </div>
-                        <div className="w-[320px] md:w-[700px] block m-auto">
+                        <div className="w-full md:w-[700px] block m-auto">
                             <div className="relative w-full">
                                 {/* Scroll Buttons */}
                                 <button

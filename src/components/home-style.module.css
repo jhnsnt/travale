@@ -18,16 +18,15 @@
     background-size: 100% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 600;
 }
 
 .bgPerson.closeFriend {
-    background: #07B727 !important;
+    background: #07B727;
 }
 
-.bgPerson.noStory {
-    background: #d8d8d8 !important;
-}
+/* .bgPerson.noStory {
+    background: #d8d8d8;
+} */
 .variant1 {
     background: url(/images/dp.jpg) top center;
     box-sizing: border-box;
@@ -60,4 +59,15 @@
 
 p.storyName {
     font-size: 13px !important;
+}
+
+@media screen and (max-width: 768px) {
+    .person {
+        height: 64px;
+        width: 64px;
+    }
+    .bgPerson {
+        height: 74px;
+        width: 74px;
+    }
 }

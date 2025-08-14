@@ -6,5 +6,8 @@ export const navItems = [
     { name: 'Sue Hunter', variant: styles.variant3, closeFriend: styles.closeFriend},
     { name: 'Angela	Brown', variant: styles.variant4},
     { name: 'Evan Hamilton', variant: styles.variant5},
-    { name: 'Tim Allan', variant: styles.variant6},
+    { name: 'Tim Allan2', variant: styles.variant6},
+    { name: 'Sue Hunter2', variant: styles.variant3, closeFriend: styles.closeFriend},
+    { name: 'Evan Hamilton2', variant: styles.variant5},
+
 ];

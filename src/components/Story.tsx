@@ -1,38 +1,80 @@
-// interface StoryProps {
-//     Name: string;
-//     variant: string;
-//     closeFriend: string;
-//     noStory: string;
-// }
-
-// export default function Story({ Name, variant, closeFriend, noStory }: StoryProps) {
-//     return (
-//         <li className="">
-//             <div className={`${styles.bgPerson} ${styles[closeFriend]} ${styles[noStory]} m-auto flex items-center`}>
-//                 <div className={`block m-auto ${styles.person} ${styles[variant]}`}></div>
-//             </div>
-//             <p className={`${styles.storyName} text-center mt-1`}>{Name}</p>
-//         </li>
-//     );
-// }
-
+import { useRef, useState, useEffect } from "react";
 import { styleClasses } from "@/config/styleArrays";
 import { navItems } from "@/config/names";
 
 export default function Story() {
+    const storyRef = useRef<HTMLUListElement>(null);
+    const [showLeftArrow, setShowLeftArrow] = useState(false);
+
+    const scrollLeftFn = () => {
+        if (!storyRef.current) return;
+        storyRef.current.scrollBy({ left: -200, behavior: "smooth" });
+    };
+
+    const scrollRightFn = () => {
+        if (!storyRef.current) return;
+        storyRef.current.scrollBy({ left: 200, behavior: "smooth" });
+        setShowLeftArrow(true);
+    };
+
+    // Check if we are back to the start to hide left arrow
+    const checkScrollPosition = () => {
+        if (!storyRef.current) return;
+        if (storyRef.current.scrollLeft <= 0) {
+        setShowLeftArrow(false);
+        }
+    };
+
+    useEffect(() => {
+        const el = storyRef.current;
+        if (el) {
+        el.addEventListener("scroll", checkScrollPosition);
+        }
+        return () => {
+        if (el) el.removeEventListener("scroll", checkScrollPosition);
+        };
+    }, []);
+
     return (
-        <ul className="story-list grid grid-cols-6 text-center">
-            {navItems.map((item) =>{
-                return(
-                    <li className="" key={item.name}>
-                        <div className={`${styleClasses[0]} ${styleClasses[2]}} ${item.noStory} ${item.closeFriend} m-auto flex items-center`}>
-                            <div className={`block m-auto  ${item.variant} ${styleClasses[4]}`}></div>
+        <div className="flex items-center px-2 relative">
+            {/* Left Arrow — fades in/out */}
+            <button
+                onClick={scrollLeftFn}
+                className={`hidden md:flex items-center justify-center absolute left-0 z-10 w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 shadow transition-opacity duration-300 ${
+                showLeftArrow ? "opacity-100" : "opacity-0 pointer-events-none"
+                }`}
+            >
+                ←
+            </button>
+            <ul 
+                ref={storyRef}
+                className="story-list flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory py-2 px-8"
+                style={{ WebkitOverflowScrolling: "touch" }}
+            >
+                {navItems.map((item) => (
+                    <li
+                        className="flex-shrink-0 w-16 md:w-20 snap-start"
+                        key={item.name}
+                    >
+                        <div
+                        className={`${styleClasses[0]} ${styleClasses[2]} ${item.noStory} ${item.closeFriend} m-auto flex items-center`}
+                        >
+                        <div
+                            className={`block m-auto ${item.variant} ${styleClasses[4]}`}
+                        ></div>
                         </div>
                         <p className="text-center mt-1 text-sm">{item.name}</p>
                     </li>
-                )
-            })}
-            
-        </ul>
+                ))}
+                
+            </ul>
+            {/* Right Arrow — always visible on desktop */}
+            <button
+                onClick={scrollRightFn}
+                className="hidden md:flex items-center justify-center absolute right-0 z-10 w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 shadow"
+            >
+                →
+            </button>
+        </div>
     )
 }

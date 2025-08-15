@@ -16,7 +16,7 @@ export default function Nav() {
     
     return (
         <div className="fixed bottom-0 w-full flex justify-center bg-white-500">
-            <ul className="grid grid-cols-4 bg-white text-center pb-5 w-full md:w-[700px]">
+            <ul className="grid grid-cols-4 bg-white text-center w-full md:w-[700px]">
                 {navItems.map((item) => {
                     const isActive = active === item.label;
                         return (

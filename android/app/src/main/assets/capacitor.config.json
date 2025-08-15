@@ -1,0 +1,6 @@
+{
+	"appId": "book.travale.app",
+	"appName": "travale",
+	"webDir": "out",
+	"bundledWebRuntime": false
+}

@@ -11,9 +11,9 @@ export default function Home() {
 
     return (
         <div>
-            <div className="flex flex-col md:flex-row w-full min-h-screen">
+            <div className="flex flex-col md:flex-row w-full min-h-screen bg-white">
                 <div className="w-full md:w-[20%]"></div>
-                <div className="w-full md:w-[60%] bg-white py-4">
+                <div className="w-full md:w-[60%] bg-white pt-4 pb-[80px] md:pb-0">
                     <div className="w-full grid-rows-3">
                         <div className="w-full md:w-[700px] block mx-auto">
                             <div className="">
@@ -34,14 +34,14 @@ export default function Home() {
                                 {/* Scroll Buttons */}
                                 <button
                                     onClick={scrollLeft}
-                                    className="absolute cursor-pointer left-0 top-1/2 -translate-y-1/2 z-10 bg-white/70 p-2 rounded-full shadow"
+                                    className="absolute cursor-pointer left-0 top-1/2 -translate-y-1/2 z-10 bg-white/70 p-2 rounded-full shadow hidden md:block"
                                 >
                                     ◀
                                 </button>
 
                                 <button
                                     onClick={scrollRight}
-                                    className="absolute cursor-pointer right-1 top-1/2 -translate-y-1/2 z-10 bg-white/70 p-2 rounded-full shadow"
+                                    className="absolute cursor-pointer right-1 top-1/2 -translate-y-1/2 z-10 bg-white/70 p-2 rounded-full shadow hidden md:block"
                                 >
                                     ▶
                                 </button>
@@ -49,7 +49,7 @@ export default function Home() {
                                 {/* Scroll Container */}
                                 <div
                                     ref={scrollRef}
-                                    className="flex overflow-x-auto space-x-4 px-4 py-6 scrollbar-hide scroll-smooth snap-x snap-mandatory"
+                                    className="flex overflow-x-auto space-x-4 px-4 py-2 scrollbar-hide scroll-smooth snap-x snap-mandatory"
                                     style={{
                                     WebkitOverflowScrolling: 'touch',
                                     scrollbarWidth: 'none',
@@ -60,7 +60,7 @@ export default function Home() {
                                     {[1, 2, 3, 4, 5, 6].map((n) => (
                                     <div
                                         key={n}
-                                        className="min-w-[250px] h-[400px] bg-blue-500 text-white rounded-lg flex items-center justify-center snap-start"
+                                        className="min-w-[300px] h-[500px] bg-blue-500 text-white rounded-lg flex items-center justify-center snap-start"
                                     >
                                         Slide {n}
                                     </div>
@@ -75,9 +75,9 @@ export default function Home() {
                                 `}</style>
                             </div>
                         </div>
-                        <footer className="content-end">
+                        {/* <footer className="content-end">
                             <p className="text-black">&copy; Travale 2025</p>
-                        </footer>
+                        </footer> */}
                     </div>
                 </div>
                 <Message />

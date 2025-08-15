@@ -22,7 +22,7 @@ export default function Home() {
                                     width={175}
                                     height={40}
                                     alt="Logo"
-                                    className="mx-auto block mb-5" 
+                                    className="mx-auto block mb-5 w-[140px] md:w-[175px]" 
                                 />
                             </div>
                             <div className="story-wrap">

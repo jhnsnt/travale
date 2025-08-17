@@ -1,19 +1,27 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect  } from 'react';
 import styles from "./home-style.module.css";
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation'; 
 
 export default function Nav() {
-    const [active, setActive] = useState('Home');
+    const pathname = usePathname();
+    const [active, setActive] = useState('');
 
     const navItems = [
-        { label: 'Home', icon: '/images/home_black.png', activeIcon: '/images/home_active.png' },
-        { label: 'Book', icon: '/images/book_black.png', activeIcon: '/images/book_active.png' },
-        { label: 'Create', icon: '/images/create_black.png', activeIcon: '/images/create_active.png' },
-        { label: 'Notification', icon: '/images/notification_black.png', activeIcon: '/images/notification_active.png' },
+        { label: 'Home', icon: '/images/home_black.png', activeIcon: '/images/home_active.png', href: "/home" },
+        { label: 'Book', icon: '/images/book_black.png', activeIcon: '/images/book_active.png', href: "/book" },
+        { label: 'Create', icon: '/images/create_black.png', activeIcon: '/images/create_active.png', href: "" },
+        { label: 'Notification', icon: '/images/notification_black.png', activeIcon: '/images/notification_active.png', href: "" },
     ];
     
+    useEffect(() => {
+        const current = navItems.find(item => item.href === pathname);
+        if (current) setActive(current.label);
+    }, [pathname]);
+
     return (
         <div className="story-wrap">
             <div className="fixed md:top-0 md:left-0 bottom-0 w-full bg-white-500 md:h-full md:w-[215px] flex">
@@ -30,17 +38,22 @@ export default function Nav() {
                             return (
                                 
                                 <li key={item.label}
-                                    onClick={() => setActive(item.label)}
-                                    className="navItem flex-row md:flex items-center m-1 p-2 md:p-3 cursor-pointer rounded md:w-[160px]"
+                                    className=" items-center m-1 p-2 md:p-3 cursor-pointer rounded md:w-[160px]"
                                 >
-                                    <Image src={isActive ? item.activeIcon : item.icon}
-                                        alt={item.label} 
-                                        className="md:mr-3 m-auto md:m-0"
-                                        width={22} height={22} />
-                                    
-                                    <div className="hidden md:block">
-                                        <span className={isActive ? `${styles.textActive} text-xs md:text-[16px]` : 'text-black text-xs md:text-[16px]'}>{item.label}</span>
-                                    </div>
+                                    <Link 
+                                        onClick={() => setActive(item.label)}
+                                        href={item.href}
+                                        className="navItem flex-row md:flex"
+                                        >
+                                        <Image src={isActive ? item.activeIcon : item.icon}
+                                            alt={item.label} 
+                                            className="md:mr-3 m-auto md:m-0"
+                                            width={22} height={22} />
+                                        
+                                        <div className="hidden md:block">
+                                            <span className={isActive ? `${styles.textActive} text-xs md:text-[16px] font-normal` : 'text-black text-xs md:text-[16px] font-normal'}>{item.label}</span>
+                                        </div>
+                                    </Link>
                                 </li>
                             );
                     })}

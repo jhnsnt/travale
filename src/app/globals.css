@@ -36,6 +36,9 @@ body {
     height: 100vh;
 }
 
+@theme {
+  --shadow-custom: 0 1px 6px rgba(0, 0, 0, 0.15); 
+}
 
 .gradient-text {
     display: inline-block;
@@ -49,6 +52,14 @@ body {
     background: url(/images/login-bg.jpg) top center;
     background-size: cover;
     /* border-radius: 0.50rem 0 0 0.5rem; */
+}
+
+.dp {
+    background-size: 100% 100%;
+    background-image: url(/images/dp.jpg);
+    height: 24px;
+    width: 24px;
+    border-radius: 50px;
 }
 
 .logo {

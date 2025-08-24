@@ -7,14 +7,14 @@ export default function Feeds() {
             {/* Scroll Buttons */}
             <button
                 onClick={scrollLeft}
-                className="absolute cursor-pointer left-0 top-1/2 -translate-y-1/2 z-10 bg-white/70 p-2 rounded-full shadow hidden md:block"
+                className="absolute cursor-pointer left-0 top-1/2 -translate-y-1/2 z-10 bg-white/70 p-2 rounded-full shadow hidden lg:block"
             >
                 ◀
             </button>
 
             <button
                 onClick={scrollRight}
-                className="absolute cursor-pointer right-1 top-1/2 -translate-y-1/2 z-10 bg-white/70 p-2 rounded-full shadow hidden md:block"
+                className="absolute cursor-pointer right-1 top-1/2 -translate-y-1/2 z-10 bg-white/70 p-2 rounded-full shadow hidden lg:block"
             >
                 ▶
             </button>

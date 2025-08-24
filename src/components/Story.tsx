@@ -40,7 +40,7 @@ export default function Story() {
             {/* Left Arrow — fades in/out */}
             <button
                 onClick={scrollLeftFn}
-                className={`hidden md:flex items-center justify-center absolute left-0 z-10 w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 shadow transition-opacity duration-300 ${
+                className={`hidden lg:flex items-center justify-center absolute left-0 z-10 w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 shadow transition-opacity duration-300 ${
                 showLeftArrow ? "opacity-100" : "opacity-0 pointer-events-none"
                 }`}
             >
@@ -48,12 +48,12 @@ export default function Story() {
             </button>
             <ul 
                 ref={storyRef}
-                className="story-list flex gap-0 md:gap-5 overflow-x-auto no-scrollbar snap-x snap-mandatory py-2 px-8"
+                className="story-list flex gap-0 lg:gap-5 overflow-x-auto no-scrollbar snap-x snap-mandatory py-2 px-8"
                 style={{ WebkitOverflowScrolling: "touch" }}
             >
                 {navItems.map((item) => (
                     <li
-                        className="flex-shrink-0 md:w-20 snap-start pl-2"
+                        className="flex-shrink-0 lg:w-20 snap-start pl-2"
                         key={item.name}
                     >
                         <div
@@ -63,7 +63,7 @@ export default function Story() {
                             className={`block m-auto ${item.variant} ${styleClasses[4]}`}
                         ></div>
                         </div>
-                        <p className="text-center mt-1 text-xs md:text-sm">{item.name}</p>
+                        <p className="text-center mt-1 text-xs lg:text-sm">{item.name}</p>
                     </li>
                 ))}
                 
@@ -71,7 +71,7 @@ export default function Story() {
             {/* Right Arrow — always visible on desktop */}
             <button
                 onClick={scrollRightFn}
-                className="hidden md:flex items-center justify-center absolute right-0 z-10 w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 shadow"
+                className="hidden lg:flex items-center justify-center absolute right-0 z-10 w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 shadow"
             >
                 →
             </button>

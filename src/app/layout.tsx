@@ -8,7 +8,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-    title: "Travale",
+    title: "Padarga - Next Stop: Anywhere",
     description: "Find it. Book it. Post it. From last-minute getaways to bucket-list adventures — share your story with the world.",
     icons: {
         icon: "/images/travale-ico.svg"

@@ -22,9 +22,9 @@ export default function WelcomePage(){
         <div className="grid grid-rows-3 h-full w-full lg:max-w-[600px] m-auto p-5 text-center text-white">
             <div>
                 <Image 
-                    src="/images/travale-logo.svg"
-                    width={175}
-                    height={40}
+                    src="/images/padarga-logo-white.png"
+                    width={225}
+                    height={65.3}
                     alt="Logo"
                     className="block m-auto" 
                 />
@@ -32,7 +32,7 @@ export default function WelcomePage(){
             <div>
                 <p className="absolute bottom-[30px] left-[30px] hidden md:block">Developer: Johnson Tinagos</p>
                 <h1 className="text-5xl lg:text-7xl text-white mb-5 font-bold">Next Stop: <span className="gradient-text">Anywhere</span></h1> 
-                <p className="text-center">Find it. Book it. Post it. From last-minute getaways to bucket-list adventures — share your story with the world.</p>
+                <h2 className="text-center">Find it. Book it. Post it. From last-minute getaways to bucket-list adventures — share your story with the world.</h2>
             </div>
             <div className="content-end">
                 <span

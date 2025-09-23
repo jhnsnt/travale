@@ -22,7 +22,7 @@ export default function WelcomePage(){
         <div className="grid grid-rows-3 h-full w-full lg:max-w-[600px] m-auto p-5 text-center text-white">
             <div>
                 <Image 
-                    src="/images/padarga-logo-white.png"
+                    src="/images/padarga_logo_white.png"
                     width={225}
                     height={65.3}
                     alt="Logo"

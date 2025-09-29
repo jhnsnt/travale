@@ -1,5 +1,5 @@
 {
-  "name": "travale",
+  "name": "padarga",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -28,5 +28,5 @@
     "tailwindcss": "^4",
     "typescript": "^5"
   },
-  "homepage": "https://jhnsnt.github.io/travale/"
+  "homepage": "https://jhnsnt.github.io/padarga/"
 }
